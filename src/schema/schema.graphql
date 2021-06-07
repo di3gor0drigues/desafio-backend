@@ -1,0 +1,18 @@
+scalar Date
+
+type Cotacao {
+    id: ID!
+    timestamp: Date!
+    data: Date!
+    cotacaoCompra: Float!
+    cotacaoVenda: Float!
+    cotacaoData: Date!
+}
+
+type Query {
+    cotacoes: [Cotacao!]!
+}
+
+type Mutation {
+    criarCotacao(data: String!): Cotacao
+}
